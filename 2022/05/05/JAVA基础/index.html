@@ -56,7 +56,7 @@
 <meta property="og:image" content="http://example.com/2022/05/05/JAVA%E5%9F%BA%E7%A1%80/image-20220501182543306-165154603584732.png">
 <meta property="og:image" content="http://example.com/2022/05/05/JAVA%E5%9F%BA%E7%A1%80/image-20220501182605641-165154605152335.png">
 <meta property="article:published_time" content="2022-05-04T16:00:00.000Z">
-<meta property="article:modified_time" content="2022-05-06T03:18:46.184Z">
+<meta property="article:modified_time" content="2022-05-06T07:11:00.833Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="基础">
 <meta name="twitter:card" content="summary_large_image">
@@ -3728,7 +3728,7 @@ id="反射的作用绕过编译阶段为集合添加数据"><strong>反射的作
 <p>⑥存入成员变量名称和值到文件中去即可。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/**</span><br><span class="hljs-comment">   目标：提供一个通用框架，支持保存所有对象的具体信息。</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">ReflectDemo</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> <span class="hljs-keyword">throws</span> Exception &#123;<br>        <span class="hljs-type">Student</span> <span class="hljs-variable">s</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Student</span>();<br>        s.setName(<span class="hljs-string">&quot;猪八戒&quot;</span>);<br>        s.setClassName(<span class="hljs-string">&quot;西天跑路1班&quot;</span>);<br>        s.setAge(<span class="hljs-number">1000</span>);<br>        s.setHobby(<span class="hljs-string">&quot;吃，睡&quot;</span>);<br>        s.setSex(<span class="hljs-string">&#x27;男&#x27;</span>);<br>        MybatisUtil.save(s);<br><br>        <span class="hljs-type">Teacher</span> <span class="hljs-variable">t</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Teacher</span>();<br>        t.setName(<span class="hljs-string">&quot;波仔&quot;</span>);<br>        t.setSex(<span class="hljs-string">&#x27;男&#x27;</span>);<br>        t.setSalary(<span class="hljs-number">6000</span>);<br>        MybatisUtil.save(t);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">MybatisUtil</span> &#123;<br>    <span class="hljs-comment">/**</span><br><span class="hljs-comment">     保存任意类型的对象</span><br><span class="hljs-comment">     * <span class="hljs-doctag">@param</span> obj</span><br><span class="hljs-comment">     */</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">save</span><span class="hljs-params">(Object obj)</span>&#123;<br>        <span class="hljs-keyword">try</span> (<br>                <span class="hljs-type">PrintStream</span> <span class="hljs-variable">ps</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">PrintStream</span>(<span class="hljs-keyword">new</span> <span class="hljs-title class_">FileOutputStream</span>(<span class="hljs-string">&quot;junit-reflect-annotation-proxy-app/src/data.txt&quot;</span>, <span class="hljs-literal">true</span>));<br>        )&#123;<br>            <span class="hljs-comment">// 1、提取这个对象的全部成员变量：只有反射可以解决</span><br>            <span class="hljs-type">Class</span> <span class="hljs-variable">c</span> <span class="hljs-operator">=</span> obj.getClass();  <span class="hljs-comment">//   c.getSimpleName()获取当前类名   c.getName获取全限名：包名+类名</span><br>            ps.println(<span class="hljs-string">&quot;================&quot;</span> + c.getSimpleName() + <span class="hljs-string">&quot;================&quot;</span>);<br><br>            <span class="hljs-comment">// 2、提取它的全部成员变量</span><br>            Field[] fields = c.getDeclaredFields();<br>            <span class="hljs-comment">// 3、获取成员变量的信息</span><br>            <span class="hljs-keyword">for</span> (Field field : fields) &#123;<br>                <span class="hljs-type">String</span> <span class="hljs-variable">name</span> <span class="hljs-operator">=</span> field.getName();<br>                <span class="hljs-comment">// 提取本成员变量在obj对象中的值（取值）</span><br>                field.setAccessible(<span class="hljs-literal">true</span>);<br>                <span class="hljs-type">String</span> <span class="hljs-variable">value</span> <span class="hljs-operator">=</span> field.get(obj) + <span class="hljs-string">&quot;&quot;</span>;<br>                ps.println(name  + <span class="hljs-string">&quot;=&quot;</span> + value);<br>            &#125;<br>        &#125; <span class="hljs-keyword">catch</span> (Exception e) &#123;<br>            e.printStackTrace();<br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
-<h6 id="注解概述作用"><strong>注解概述、作用</strong></h6>
+<h5 id="注解概述作用"><strong>注解概述、作用</strong></h5>
 <ul>
 <li><p>Java 注解（Annotation）又称 Java 标注，是 JDK5.0
 引入的一种注释机制。</p></li>
@@ -4214,15 +4214,21 @@ data-cites="属性名">[@属性名=‘值’]</span></td>
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/05/05/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1%E6%A1%88%E4%BE%8B/">
+                      <a href="/2022/05/05/JDBC/">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">mysql设计案例</span>
+                        <span class="hidden-mobile">JDBC</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
                   </article>
                   <article class="post-next col-6">
                     
+                    
+                      <a href="/2022/05/05/mysql%E5%9F%BA%E7%A1%80/">
+                        <span class="hidden-mobile">mysql基础</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
                     
                   </article>
                 </div>
