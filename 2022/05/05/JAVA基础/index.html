@@ -23,7 +23,10 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="这是一个java基础课程学习记录. JAVA java基础 跨平台，解释型 所有变量、方法、类名：见名知义 类成员变量：首字母小写和驼峰原则：monthSalary 局部变量：首字母小写和驼峰原则 常量：大写字母和下划线：MAX _VALUE 类名：首字母大写和驼峰原则：Man,GoodMan 方法名：首字母小写和驼峰原则：runO,runRun(0 整数默认int类型: lon">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/2022/05/05/JAVA%E5%9F%BA%E7%A1%80/image-20210923101403191.png">
+<meta property="og:image" content="http://example.com/2022/05/05/JAVA%E5%9F%BA%E7%A1%80/image-20210923101448738.png">
 <meta property="og:image" content="http://example.com/2022/05/05/JAVA%E5%9F%BA%E7%A1%80/image-20220414191342707.png">
+<meta property="og:image" content="http://example.com/2022/05/05/JAVA%E5%9F%BA%E7%A1%80/image-20220505205629204.png">
 <meta property="og:image" content="http://example.com/2022/05/05/JAVA%E5%9F%BA%E7%A1%80/image-20220416144955468.png">
 <meta property="og:image" content="http://example.com/2022/05/05/JAVA%E5%9F%BA%E7%A1%80/image-20220425105730336.png">
 <meta property="og:image" content="http://example.com/2022/05/05/JAVA%E5%9F%BA%E7%A1%80/image-20220425105950636.png">
@@ -53,11 +56,11 @@
 <meta property="og:image" content="http://example.com/2022/05/05/JAVA%E5%9F%BA%E7%A1%80/image-20220501182543306-165154603584732.png">
 <meta property="og:image" content="http://example.com/2022/05/05/JAVA%E5%9F%BA%E7%A1%80/image-20220501182605641-165154605152335.png">
 <meta property="article:published_time" content="2022-05-04T16:00:00.000Z">
-<meta property="article:modified_time" content="2022-05-05T08:18:24.842Z">
+<meta property="article:modified_time" content="2022-05-05T13:20:58.435Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="基础">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://example.com/2022/05/05/JAVA%E5%9F%BA%E7%A1%80/image-20220414191342707.png">
+<meta name="twitter:image" content="http://example.com/2022/05/05/JAVA%E5%9F%BA%E7%A1%80/image-20210923101403191.png">
   
   
   <title>java基础 - Hexo</title>
@@ -227,7 +230,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      130k 字
+      132k 字
     </span>
   
 
@@ -236,7 +239,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      1084 分钟
+      1101 分钟
     </span>
   
 
@@ -271,7 +274,7 @@
               <p>这是一个java基础课程学习记录.</p>
 <h1 id="java">JAVA</h1>
 <h2 id="java基础">java基础</h2>
-<h6 id="跨平台解释型"><strong>跨平台，解释型</strong></h6>
+<h4 id="跨平台解释型"><strong>跨平台，解释型</strong></h4>
 <p>所有变量、方法、类名：见名知义
 类成员变量：首字母小写和驼峰原则：monthSalary
 局部变量：首字母小写和驼峰原则 常量：大写字母和下划线：MAX _VALUE
@@ -280,26 +283,206 @@
 <p>整数默认int类型: long a = 2L;</p>
 <p>小数默认double：float a = 1.2F;</p>
 <p>boolean：只能赋值true，false</p>
-<h6 id="位运算"><strong>位运算</strong>：</h6>
-<p>1、&amp;和&amp;&amp;：与，短路与</p>
-<p>2、|和||：或，短路或</p>
-<h6 id="字符串连接符"><strong>字符串连接符</strong>：+</h6>
-<p>通过String，+变为字符串连接符。</p>
+<h4 id="java中数据类型">java中数据类型</h4>
+<table>
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 10%" />
+<col style="width: 12%" />
+<col style="width: 64%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">数据类型</th>
+<th style="text-align: center;">关键字</th>
+<th style="text-align: center;">内存占用</th>
+<th style="text-align: center;">取值范围</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">整数</td>
+<td style="text-align: center;">byte</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">负的2的7次方 ~ 2的7次方-1(-128~127)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"></td>
+<td style="text-align: center;">short</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">负的2的15次方 ~
+2的15次方-1(-32768~32767)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"></td>
+<td style="text-align: center;">int</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">负的2的31次方 ~ 2的31次方-1</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"></td>
+<td style="text-align: center;">long</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">负的2的63次方 ~ 2的63次方-1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">浮点数</td>
+<td style="text-align: center;">float</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">1.401298e-45 ~ 3.402823e+38</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"></td>
+<td style="text-align: center;">double</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">4.9000000e-324 ~ 1.797693e+308</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">字符</td>
+<td style="text-align: center;">char</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">0-65535</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">布尔</td>
+<td style="text-align: center;">boolean</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">true，false</td>
+</tr>
+</tbody>
+</table>
+<h4 id="自动类型转换">自动类型转换</h4>
+<p>*类型范围小<strong>的变量，可以</strong>直接赋值<strong>给</strong>类型范围大**的变量。</p>
+<img src="/2022/05/05/JAVA%E5%9F%BA%E7%A1%80/image-20210923101403191.png" srcset="/img/loading.gif" lazyload class="">
+<h4 id="表达式的自动类型转换"><strong>表达式的自动类型转换</strong></h4>
+<p>在表达式中，小范围类型的变量会自动转换成当前较大范围的类型再运算。</p>
+<img src="/2022/05/05/JAVA%E5%9F%BA%E7%A1%80/image-20210923101448738.png" srcset="/img/loading.gif" lazyload class="">
 <img src="/2022/05/05/JAVA%E5%9F%BA%E7%A1%80/image-20220414191342707.png" srcset="/img/loading.gif" lazyload class="">
 <p>特例：整形常量为int，可自动转化为byte/short/char，前提为不越界</p>
-<h6 id="方法函数"><strong>方法</strong>：函数</h6>
-<h6 id="内存管理"><strong>内存管理</strong></h6>
+<h4 id="位运算"><strong>位运算</strong>：</h4>
+<p>1、&amp;和&amp;&amp;：与，短路与</p>
+<p>2、|和||：或，短路或</p>
+<h4 id="逻辑运算符">逻辑运算符</h4>
+<table>
+<thead>
+<tr class="header">
+<th>符号</th>
+<th>作用</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>&amp;</td>
+<td>逻辑与</td>
+<td>a&amp;b，a和b都是true，结果为true，否则为false</td>
+</tr>
+<tr class="even">
+<td>|</td>
+<td>逻辑或</td>
+<td>a|b，a和b都是false，结果为false，否则为true</td>
+</tr>
+<tr class="odd">
+<td>^</td>
+<td>逻辑异或</td>
+<td>a^b，a和b结果不同为true，相同为false</td>
+</tr>
+<tr class="even">
+<td>!</td>
+<td>逻辑非</td>
+<td>!a，结果和a的结果正好相反</td>
+</tr>
+</tbody>
+</table>
+<h4 id="短路逻辑运算符">短路逻辑运算符</h4>
+<table>
+<thead>
+<tr class="header">
+<th>符号</th>
+<th>作用</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>&amp;&amp;</td>
+<td>短路与</td>
+<td>作用和&amp;相同，但是有短路效果</td>
+</tr>
+<tr class="even">
+<td>||</td>
+<td>短路或</td>
+<td>作用和|相同，但是有短路效果</td>
+</tr>
+</tbody>
+</table>
+<p>数据输入</p>
+<figure class="highlight java"><table><tr><td class="gutter"><div class="code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">Scanner</span> <span class="hljs-variable">sc</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Scanner</span>(System.in);<span class="hljs-comment">// 创建</span><br><span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> sc.nextInt(); <span class="hljs-comment">// 表示将键盘录入的值作为int数返回。</span><br></code></pre></td></tr></table></figure>
+<h4 id="字符串连接符"><strong>字符串连接符</strong>：+</h4>
+<p>通过String，+变为字符串连接符。</p>
+<h4 id="方法函数"><strong>方法</strong>：函数</h4>
+<h4 id="random产生随机数">Random产生随机数</h4>
+<ol type="1">
+<li><h6 id="创建对象">创建对象</h6>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">Random</span> <span class="hljs-variable">r</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Random</span>();<br></code></pre></td></tr></table></figure></li>
+<li><h6 id="产生随机数">产生随机数</h6>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">int</span> <span class="hljs-variable">num</span> <span class="hljs-operator">=</span> r.nextInt(<span class="hljs-number">10</span>);<br></code></pre></td></tr></table></figure>
+解释：
+10代表的是一个范围，如果括号写10，产生的随机数就是0-9，括号写20，参数的随机数则是0-19</li>
+</ol>
+<h4 id="数组">数组</h4>
+<h6 id="动态初始化"><strong>动态初始化</strong></h6>
+<p>数组动态初始化就是只给定数组的长度，由系统给出默认初始化值。</p>
+<h6 id="静态初始化"><strong>静态初始化</strong></h6>
+<p>在创建数组时，直接将元素确定</p>
+<h4 id="内存管理"><strong>内存管理</strong></h4>
 <p>Java的内存管理很大程度就是：堆中对象的管理，其中包括对象空间的分配和释放。
 对象空间的分配：使用new关键字创建对象即可
 对象空间的释放：将对象赋值null即可。</p>
+<table>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 85%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>区域名称</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>寄存器</td>
+<td>给CPU使用，和我们开发无关。</td>
+</tr>
+<tr class="even">
+<td>本地方法栈</td>
+<td>JVM在使用操作系统功能的时候使用，和我们开发无关。</td>
+</tr>
+<tr class="odd">
+<td>方法区</td>
+<td>存储可以运行的class文件。</td>
+</tr>
+<tr class="even">
+<td>堆内存</td>
+<td>存储对象或者数组，new来创建的，都存储在堆内存。</td>
+</tr>
+<tr class="odd">
+<td>方法栈</td>
+<td>方法运行时使用的内存，比如main方法运行，进入方法栈中执行。</td>
+</tr>
+</tbody>
+</table>
+<img src="/2022/05/05/JAVA%E5%9F%BA%E7%A1%80/image-20220505205629204.png" srcset="/img/loading.gif" lazyload class="">
+<h4 id="堆中对象回收">堆中对象回收</h4>
 <img src="/2022/05/05/JAVA%E5%9F%BA%E7%A1%80/image-20220416144955468.png" srcset="/img/loading.gif" lazyload class="">
-<h6 id="jvm调优和full-gc"><strong>JVM调优和Full GC</strong></h6>
+<h4 id="jvm调优和full-gc"><strong>JVM调优和Full GC</strong></h4>
 <p>在对JVM调优的过程中，很大一部分工作就是对于FuLL
 GC的调节。有如下原因可能</p>
-<h6 id="导致full-gc"><strong>导致Full GC:</strong></h6>
+<h4 id="导致full-gc"><strong>导致Full GC:</strong></h4>
 <p>1.年老代(Tenured)被写满 2.永久代(Perm)被写满
 3.System.gc0\()被显式调用 4.上一次GC之后Heap的各域分配策略动态变化</p>
-<h6 id="this"><strong>this</strong></h6>
+<h4 id="this"><strong>this</strong></h4>
 <p>1、this()调用重载的构造方法，避免相同的初始化代码。但只能在构造方法中用，并且必须位于构造方法的第一句。</p>
 <p>xzs();{}</p>
 <p>xzs(int a){</p>
@@ -308,58 +491,198 @@ GC的调节。有如下原因可能</p>
 <p>}</p>
 <p>2、this不能用于static方法中。
 3、this是作为普通方法的“隐式参数”，由系统传入到方法中。</p>
-<h6 id="包机制packageimport"><strong>包机制package、import</strong></h6>
+<h4 id="包机制packageimport"><strong>包机制package、import</strong></h4>
 <p>包(（package)相当于文件夹对于文件的作用。用于管理类、用于解决类的重名问题。</p>
-<h6 id="package"><strong>package</strong></h6>
+<h4 id="package"><strong>package</strong></h4>
 <p>package的使用有两个要点： 1.通常是类的第一句非注释性语句。
 2.包名：域名倒着写即可，再加上模块名，便于内部管理类。com.xzs.aa</p>
-<h6 id="导入类import"><strong>导入类import</strong></h6>
+<h4 id="导入类import"><strong>导入类import</strong></h4>
 <p>如果要使用其他包的类，需使用import,从而在本类中直接通过类名来调用，否则就需要书写类的完整包名和类名。</p>
 <p>import java.util.* //导入所有类，降低编译速度，不会降低运行速度</p>
-<h6 id="继承"><strong>继承</strong></h6>
+<h4 id="string类">String类</h4>
+<h6 id="string类概述"><strong>String类概述</strong></h6>
+<p>String 类代表字符串，Java
+程序中的所有字符串文字（例如“abc”）都被实现为此类的实例。也就是说，Java
+程序中所有的双引号字符串，都是 String 类的对象。String 类在 java.lang
+包下，所以使用的时候不需要导包！</p>
+<h6 id="常用的构造方法"><strong>常用的构造方法</strong></h6>
+<table>
+<colgroup>
+<col style="width: 39%" />
+<col style="width: 60%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>方法名</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>public String()</td>
+<td>创建一个空白字符串对象，不含有任何内容</td>
+</tr>
+<tr class="even">
+<td>public String(char[] chs)</td>
+<td>根据字符数组的内容，来创建字符串对象</td>
+</tr>
+<tr class="odd">
+<td>public String(byte[] bys)</td>
+<td>根据字节数组的内容，来创建字符串对象</td>
+</tr>
+<tr class="even">
+<td>String s = “abc”;</td>
+<td>直接赋值的方式创建字符串对象，内容就是abc</td>
+</tr>
+</tbody>
+</table>
+<h6
+id="创建字符串对象两种方式的区别"><strong>创建字符串对象两种方式的区别</strong></h6>
+<ul>
+<li><p>通过构造方法创建</p>
+<p>​ 通过 new 创建的字符串对象，每一次 new
+都会申请一个内存空间，虽然内容相同，但是地址值不同</p></li>
+<li><p>直接赋值方式创建</p>
+<p>​
+以“”方式给出的字符串，只要字符序列相同(顺序和大小写)，无论在程序代码中出现几次，JVM
+都只会建立一个 String 对象，并在字符串池中维护</p></li>
+</ul>
+<h4 id="字符串的比较">字符串的比较</h4>
+<h6 id="号的作用"><strong>1 ==号的作用</strong></h6>
+<ul>
+<li>比较基本数据类型：比较的是具体的值</li>
+<li>比较引用数据类型：比较的是对象地址值</li>
+</ul>
+<h6 id="equals方法的作用"><strong>2 equals方法的作用</strong></h6>
+<ul>
+<li><p>比较两个字符串内容是否相同、区分大小写</p>
+<p>事实上重写了equals方法</p></li>
+</ul>
+<h4 id="arraylist">ArrayList</h4>
+<h6 id="arraylist类概述"><strong>ArrayList类概述</strong></h6>
+<ul>
+<li><p>什么是集合</p>
+<p>​ 提供一种存储空间可变的存储模型，存储的数据容量可以发生改变</p></li>
+<li><p>ArrayList集合的特点</p>
+<p>​ 底层是数组实现的，长度可以变化</p></li>
+<li><p>泛型的使用</p>
+<p>​ 用于约束集合中存储元素的数据类型</p></li>
+</ul>
+<h6 id="arraylist类常用方法"><strong>ArrayList类常用方法</strong></h6>
+<p><strong>构造方法</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th>方法名</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>public ArrayList()</td>
+<td>创建一个空的集合对象</td>
+</tr>
+</tbody>
+</table>
+<p><strong>成员方法</strong></p>
+<table>
+<colgroup>
+<col style="width: 51%" />
+<col style="width: 48%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>方法名</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>public boolean remove(Object o)</td>
+<td>删除指定的元素，返回删除是否成功</td>
+</tr>
+<tr class="even">
+<td>public E remove(int index)</td>
+<td>删除指定索引处的元素，返回被删除的元素</td>
+</tr>
+<tr class="odd">
+<td>public E set(int index,E element)</td>
+<td>修改指定索引处的元素，返回被修改的元素</td>
+</tr>
+<tr class="even">
+<td>public E get(int index)</td>
+<td>返回指定索引处的元素</td>
+</tr>
+<tr class="odd">
+<td>public int size()</td>
+<td>返回集合中的元素的个数</td>
+</tr>
+<tr class="even">
+<td>public boolean add(E e)</td>
+<td>将指定的元素追加到此集合的末尾</td>
+</tr>
+<tr class="odd">
+<td>public void add(int index,E element)</td>
+<td>在此集合中的指定位置插入指定的元素</td>
+</tr>
+</tbody>
+</table>
+<h4 id="封装思想">封装思想</h4>
+<ol type="1">
+<li><h6 id="封装概述">封装概述</h6>
+是面向对象三大特征之一（封装，继承，多态）
+是面向对象编程语言对客观世界的模拟，客观世界里成员变量都是隐藏在对象内部的，外界是无法直接操作的</li>
+<li><h6 id="封装原则">封装原则</h6>
+将类的某些信息隐藏在类内部，不允许外部程序直接访问，而是通过该类提供的方法来实现对隐藏信息的操作和访问
+成员变量private，提供对应的getXxx()/setXxx()方法</li>
+<li><h6 id="封装好处">封装好处</h6>
+通过方法来控制成员变量的操作，提高了代码的安全性
+把代码用方法进行封装，提高了代码的复用性</li>
+</ol>
+<h4 id="继承"><strong>继承</strong></h4>
 <p>extends</p>
-<h6 id="组合"><strong>组合</strong></h6>
+<h4 id="组合"><strong>组合</strong></h4>
 <p>在子类创建父类对象，使用父类属性</p>
-<h6 id="super"><strong>super</strong></h6>
+<h4 id="super"><strong>super</strong></h4>
 <p>调用父类方法，父类被覆盖了，但依然存在。</p>
-<h6 id="静态代码块"><strong>静态代码块</strong>：</h6>
+<h4 id="静态代码块"><strong>静态代码块</strong>：</h4>
 <p>static{}；属于类，优先加载。一般用于初始化静态资源。比如扑克牌类：优先定义54张牌的静态集合。</p>
-<h6 id="静态工具类"><strong>静态工具类</strong>：</h6>
+<h4 id="静态工具类"><strong>静态工具类</strong>：</h4>
 <p>使用static定义一系列方法，供大家使用，建议私有化，不用其创建对象。</p>
-<h6 id="设计模式"><strong>设计模式</strong>：</h6>
+<h4 id="设计模式"><strong>设计模式</strong>：</h4>
 <p>开发中经常遇到一些问题，一个问题通常有种解法的，但其中肯定有一种解法是最优的，这个最优的解法被人总结出来了，称之为设计模式。</p>
-<h6 id="单例模式"><strong>单例模式</strong>：</h6>
+<h4 id="单例模式"><strong>单例模式</strong>：</h4>
 <p>可以保证系统中，应用该模式的这个类永远只有一个实例，即一个类永远只能创建一个对象。
 例如任务管理器对象我们只需要一个就可以解决问题了，这样可以节省内存空间。<strong>设计步骤：</strong>定义一个类，把构造器私有。定义一个静态变量存储一个对象。</p>
-<p>`饿汉单例：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><div class="code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></div></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">SingleInstance</span>&#123;`<br><br>​	`<span class="hljs-comment">//2、提供储存地址`</span><br><br>​	`<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-type">SingleInstance</span> <span class="hljs-variable">instance</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">SIngleInstance</span>();`<br><br>​	`<span class="hljs-comment">//1、构造器私有化`</span><br><br>​	`<span class="hljs-keyword">private</span> <span class="hljs-title function_">SingleInstance</span><span class="hljs-params">()</span>&#123;&#125;`<br><br>`&#125;`<br></code></pre></td></tr></table></figure>
+<h6 id="饿汉单例">`饿汉单例：</h6>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">SingleInstance</span>&#123;`<br><br>​	`<span class="hljs-comment">//2、提供储存地址`</span><br><br>​	`<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-type">SingleInstance</span> <span class="hljs-variable">instance</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">SIngleInstance</span>();`<br><br>​	`<span class="hljs-comment">//1、构造器私有化`</span><br><br>​	`<span class="hljs-keyword">private</span> <span class="hljs-title function_">SingleInstance</span><span class="hljs-params">()</span>&#123;&#125;`<br><br>`&#125;`<br></code></pre></td></tr></table></figure>
 <h6 id="懒汉单例"><strong>懒汉单例</strong></h6>
 <p>1、定义一个类，把构造器私有。 2、定义一个静态变量存储一个对象。
 3、提供一个返回单例对象的方法</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">SingleInstance</span>&#123;`<br><br>`<span class="hljs-comment">//2、提供储存地址`</span><br><br>`<span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-type">SingleInstance</span> <span class="hljs-variable">instance</span> <span class="hljs-operator">=</span> <span class="hljs-literal">null</span>;<br><br><span class="hljs-comment">//3、提供一个方法`</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> SingleInstance <span class="hljs-title function_">getInstance</span><span class="hljs-params">()</span>&#123;<br>	<span class="hljs-keyword">if</span>(instance==<span class="hljs-literal">null</span>)<br>		instance = <span class="hljs-keyword">new</span> <span class="hljs-title class_">SingleInstance</span>();<br>	<span class="hljs-keyword">return</span> instance;<br>&#125;<br><br>`<span class="hljs-comment">//1、构造器私有化`</span><br><br>`<span class="hljs-keyword">private</span> <span class="hljs-title function_">SingleInstance</span><span class="hljs-params">()</span>&#123;&#125;`<br><br>`&#125;`<br></code></pre></td></tr></table></figure>
-<h6 id="继承的特点"><strong>继承的特点</strong></h6>
+<h4 id="继承的特点"><strong>继承的特点</strong></h4>
 <p>①子类可以继承父类的属性和行为，但是子类不能继承父类的构造器。
 ②Java是单继承模式：一个类只能继承一个直接父类。
 ③Java不支持多继承、但是支持多层继承。
 ④Java中所有的类都是Object类的子类。</p>
-<h6
-id="子类继承父类后构造器的特点"><strong>子类继承父类后构造器的特点：</strong></h6>
+<h4
+id="子类继承父类后构造器的特点"><strong>子类继承父类后构造器的特点：</strong></h4>
 <p>子类中所有的构造器默认都会先访问父类中无参的构造器，再执行自己。</p>
-<h6 id="finall的作用"><strong>finall的作用</strong></h6>
+<h4 id="finall的作用"><strong>finall的作用</strong></h4>
 <p>final关键字是最终的意思，可以修饰(类、方法、变量)
 修饰类：表明该类是最终类，不能被继承。
 修饰方法：表明该方法是最终方法，不能被重写。
 修饰变量：表示该变量第一次赋值后，不能再次被赋值（有且仅能被赋值一次）。</p>
-<h6 id="枚举的特征"><strong>枚举的特征：</strong></h6>
+<h4 id="枚举的特征"><strong>枚举的特征：</strong></h4>
 <p>枚举类都是继承了枚举类型：java.lang.Enum
 枚举都是最终类，不可以被继承。
 构造器的构造器都是私有的，枚举对外不能创建对象。
 枚举类的第一行默认都是罗列枚举对象的名称的。
 枚举类相当于是多例模式。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">enum</span> <span class="hljs-title class_">Season</span>&#123;<br> SPRING,SUMER,AUTUMN,WINTER;<br>&#125;<br>Season k;<br>SWITCh(k)&#123;<br>	<span class="hljs-keyword">case</span> SPRING:<br>	<span class="hljs-keyword">case</span> SUMER:<br>	<span class="hljs-keyword">case</span> AUTUMN:<br>	<span class="hljs-keyword">case</span> WINTER:<br>&#125;<br></code></pre></td></tr></table></figure>
-<h6 id="模板方法">模板方法：</h6>
+<h4 id="模板方法">模板方法：</h4>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Student</span>&#123;<br>	<span class="hljs-comment">//声明模板方法,建议用final修饰</span><br>	<span class="hljs-keyword">public</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">write</span><span class="hljs-params">()</span>&#123;<br>        System.out.println(<span class="hljs-string">&quot;我的爸爸&quot;</span>);<br>        System.out.println(wrtiemain());<br>        System.out.println(<span class="hljs-string">&quot;他真牛逼&quot;</span>);<br>	&#125;<br>	<span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-title function_">writemain</span><span class="hljs-params">()</span>&#123;<br>		 System.out.println(<span class="hljs-string">&quot;&quot;</span>);<br>	&#125;<br>&#125;<br></code></pre></td></tr></table></figure>
-<h6 id="接口">接口:</h6>
+<h4 id="接口">接口:</h4>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">interface</span> <span class="hljs-title class_">Demo</span>&#123;<br>	<span class="hljs-comment">//1、常量</span><br>	<span class="hljs-type">String</span> <span class="hljs-variable">SCHOOL_NAME</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;xzs&quot;</span><br>	<span class="hljs-comment">//public static final String SCHOOL_NAME</span><br>	<span class="hljs-comment">//2、抽象方法</span><br>	<span class="hljs-keyword">void</span> <span class="hljs-title function_">run</span><span class="hljs-params">()</span>;<br>	<span class="hljs-comment">//public abstract void run();</span><br>&#125;<br></code></pre></td></tr></table></figure>
 <h6 id="接口实现">接口实现：</h6>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">man</span> <span class="hljs-keyword">implements</span> <span class="hljs-title class_">Demo</span>&#123;<br>	<br>&#125;<br></code></pre></td></tr></table></figure>
@@ -372,7 +695,7 @@ id="子类继承父类后构造器的特点"><strong>子类继承父类后构造
 3、一个类继承了父类，同时又实现了接口，父类中和接口中有同名方法，<strong>默认用父类的</strong>。
 4、一个类实现了多个接口，多个接口中存在同名的默认方法，不冲突，<strong>这个类重写该方法即可</strong>。
 5、一个接口继承多个接口，是没有问题的，如果多个接口中存在规范冲突则不能多继承。</p>
-<h6 id="多态">多态：</h6>
+<h4 id="多态">多态：</h4>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//Animal 父类 run();方法</span><br><span class="hljs-comment">//dog 子类 wang();方法独有</span><br><span class="hljs-comment">//cat 子类 miao();方法独有</span><br><span class="hljs-type">Animal</span> <span class="hljs-variable">a</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">dog</span>();<br><span class="hljs-type">Animal</span> <span class="hljs-variable">b</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">cat</span>();<br><span class="hljs-comment">//多态展示</span><br>a.run();<span class="hljs-comment">//狗跑</span><br>b.run();<span class="hljs-comment">//猫跑</span><br><span class="hljs-comment">//a.wang();出错</span><br><span class="hljs-type">dog</span> <span class="hljs-variable">c</span> <span class="hljs-operator">=</span>(dog) a;<br>c.wang();<span class="hljs-comment">//正确，没有创建新对象，c不是新对象</span><br><span class="hljs-comment">//建议用法</span><br><span class="hljs-keyword">if</span> (a <span class="hljs-keyword">instanceof</span> dog)&#123;<br>	<span class="hljs-type">dog</span> <span class="hljs-variable">c</span> <span class="hljs-operator">=</span>(dog) a;<br>	c.wang();<br>&#125;<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(a <span class="hljs-keyword">instanceof</span> cat)&#123;<br>	<span class="hljs-type">cat</span> <span class="hljs-variable">c</span> <span class="hljs-operator">=</span>(cat) a;<br>	c.miao();<br>&#125;<br></code></pre></td></tr></table></figure>
 <h4 id="内部类">内部类</h4>
 <p>·内部类就是定义在一个类里面的类，里面的类可以理解成（寄生），外部类可以理解成（宿主）。</p>
@@ -2104,8 +2427,8 @@ IOUtils</p></li>
 <p>②将commons-io-2.6.jar文件复制到lib文件夹</p>
 <p>③在jar文件上点右键，选择 Add as Library -&gt; 点击OK</p>
 <p>④在类中导包使用</p>
-<h2 id="线程">线程</h2>
-<h4 id="线程创建方式">线程创建方式</h4>
+<h4 id="线程">线程</h4>
+<h5 id="线程创建方式">线程创建方式</h5>
 <h6 id="thread类"><strong>Thread类</strong></h6>
 <p>Java是通过java.lang.Thread 类来代表线程的。</p>
 <p>按照面向对象的思想，Thread类应该提供了实现多线程的方式。</p>
@@ -3888,6 +4211,12 @@ data-cites="属性名">[@属性名=‘值’]</span></td>
                   </article>
                   <article class="post-next col-6">
                     
+                    
+                      <a href="/2022/05/05/mysql%E9%AB%98%E7%BA%A7/">
+                        <span class="hidden-mobile">mysql高级</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
                     
                   </article>
                 </div>
