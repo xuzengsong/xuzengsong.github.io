@@ -69,7 +69,7 @@
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.14","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.14","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":false,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
@@ -276,7 +276,7 @@
 <li><h6 id="字符串">字符串</h6>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-type">char</span> ： 定长字符串。<br>	优点：存储性能高<br>	缺点：浪费空间<br>	eg ： name <span class="hljs-type">char</span>(<span class="hljs-number">10</span>)  如果存储的数据字符个数不足<span class="hljs-number">10</span>个，也会占<span class="hljs-number">10</span>个的空间<br><span class="hljs-type">varchar</span> ： 变长字符串。<br>	优点：节约空间<br>	缺点：存储性能底<br>	eg ： name <span class="hljs-type">varchar</span>(<span class="hljs-number">10</span>) 如果存储的数据字符个数不足<span class="hljs-number">10</span>个，那就数据字符个数是几就占几个的空间	<br></code></pre></td></tr></table></figure></li>
 </ul>
-<img src="/2022/05/06/mysql%E6%80%BB%E7%BB%93/image-20220506153216533.png" srcset="/img/loading.gif" lazyload class="">
+<img src="/2022/05/06/mysql%E6%80%BB%E7%BB%93/image-20220506153216533.png" class="">
 <h5 id="ddl操作数据库">DDL:操作数据库</h5>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">SHOW</span> DATABASES; <span class="hljs-comment">-- 查询所有的数据库</span><br><span class="hljs-keyword">CREATE</span> DATABASE 数据库名称; <span class="hljs-comment">-- 创建数据库</span><br><span class="hljs-keyword">CREATE</span> DATABASE IF <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">EXISTS</span> 数据库名称;<span class="hljs-comment">-- 创建数据库(判断，如果不存在则创建)</span><br><span class="hljs-keyword">DROP</span> DATABASE 数据库名称;<span class="hljs-comment">-- 删除数据库</span><br><span class="hljs-keyword">DROP</span> DATABASE IF <span class="hljs-keyword">EXISTS</span> 数据库名称;<span class="hljs-comment">-- 删除数据库(判断，如果存在则删除)</span><br>USE 数据库名称;<span class="hljs-comment">-- 使用数据库</span><br><span class="hljs-keyword">SELECT</span> DATABASE();<span class="hljs-comment">-- 查看当前使用的数据库</span><br></code></pre></td></tr></table></figure>
 <h5 id="ddl操作表">DDL:操作表</h5>
@@ -394,9 +394,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/05/07/Maven&amp;MyBatis/">
+                      <a href="/2022/05/07/Mybatis/">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Maven&MyBatis</span>
+                        <span class="hidden-mobile">Mybatis练习</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -507,10 +507,6 @@
   <script  src="/js/local-search.js" ></script>
 
 
-
-  
-    <script  src="/js/img-lazyload.js" ></script>
-  
 
 
 

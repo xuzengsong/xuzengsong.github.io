@@ -108,7 +108,7 @@
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.14","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.14","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":false,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
@@ -314,7 +314,7 @@
 </ul>
 </blockquote>
 <h2 id="配置文件实现crud">1，配置文件实现CRUD</h2>
-<img src="/2022/05/07/Mybatis/image-20220507203702206.png" srcset="/img/loading.gif" lazyload class="">
+<img src="/2022/05/07/Mybatis/image-20220507203702206.png" class="">
 <p>如上图所示产品原型，里面包含了品牌数据的 <code>查询</code>
 、<code>按条件查询</code>、<code>添加</code>、<code>删除</code>、<code>批量删除</code>、<code>修改</code>
 等功能，而这些功能其实就是对数据库表中的数据进行CRUD操作。接下来我们就使用Mybatis完成品牌数据的增删改查操作。以下是我们要完成功能列表：</p>
@@ -350,7 +350,7 @@
 <li><p>编写测试用例</p>
 <p>测试代码需要在 <code>test/java</code>
 目录下创建包及测试用例。项目结构如下：</p>
-<img src="/2022/05/07/Mybatis/image-20220507203716089.png" srcset="/img/loading.gif" lazyload class=""></li>
+<img src="/2022/05/07/Mybatis/image-20220507203716089.png" class=""></li>
 <li><p>安装 MyBatisX 插件</p>
 <ul>
 <li><p>MybatisX 是一款基于 IDEA 的快速开发插件，为效率而生。</p></li>
@@ -362,31 +362,31 @@
 <li><p>安装方式</p>
 <p>点击 <code>file</code> ，选择 <code>settings</code>
 ，就能看到如下图所示界面</p>
-<img src="/2022/05/07/Mybatis/image-20220507203721337.png" srcset="/img/loading.gif" lazyload class="">
+<img src="/2022/05/07/Mybatis/image-20220507203721337.png" class="">
 <blockquote>
 <p>注意：安装完毕后需要重启IDEA</p>
 </blockquote></li>
 <li><p>插件效果</p>
-<img src="/2022/05/07/Mybatis/image-20220507203725884.png" srcset="/img/loading.gif" lazyload class="">
+<img src="/2022/05/07/Mybatis/image-20220507203725884.png" class="">
 <p>红色头绳的表示映射配置文件，蓝色头绳的表示mapper接口。在mapper接口点击红色头绳的小鸟图标会自动跳转到对应的映射配置文件，在映射配置文件中点击蓝色头绳的小鸟图标会自动跳转到对应的mapper接口。也可以在mapper接口中定义方法，自动生成映射配置文件中的
 <code>statement</code> ，如图所示</p>
-<img src="/2022/05/07/Mybatis/image-20220507203731087.png" srcset="/img/loading.gif" lazyload class=""></li>
+<img src="/2022/05/07/Mybatis/image-20220507203731087.png" class=""></li>
 </ul></li>
 </ul>
 <h3 id="查询所有数据">1.2 查询所有数据</h3>
-<img src="/2022/05/07/Mybatis/image-20220507203736645.png" srcset="/img/loading.gif" lazyload class="">
+<img src="/2022/05/07/Mybatis/image-20220507203736645.png" class="">
 <p>如上图所示就页面上展示的数据，而这些数据需要从数据库进行查询。接下来我们就来讲查询所有数据功能，而实现该功能我们分以下步骤进行实现：</p>
 <ul>
 <li><p>编写接口方法：Mapper接口</p>
 <ul>
 <li><p>参数：无</p>
 <p>查询所有数据功能是不需要根据任何条件进行查询的，所以此方法不需要参数。</p>
-<img src="/2022/05/07/Mybatis/image-20220507203744003.png" srcset="/img/loading.gif" lazyload class=""></li>
+<img src="/2022/05/07/Mybatis/image-20220507203744003.png" class=""></li>
 <li><p>结果：List<Brand></p>
 <p>我们会将查询出来的每一条数据封装成一个 <code>Brand</code>
 对象，而多条数据封装多个 <code>Brand</code>
 对象，需要将这些对象封装到List集合中返回。</p>
-<img src="/2022/05/07/Mybatis/image-20220507203749127.png" srcset="/img/loading.gif" lazyload class=""></li>
+<img src="/2022/05/07/Mybatis/image-20220507203749127.png" class=""></li>
 <li><p>执行方法、测试</p></li>
 </ul></li>
 </ul>
@@ -407,7 +407,7 @@
 <p>注意：现在我们感觉测试这部分代码写起来特别麻烦，我们可以先忍忍。以后我们只会写上面的第3步的代码，其他的都不需要我们来完成。</p>
 </blockquote>
 <p>执行测试方法结果如下：</p>
-<img src="/2022/05/07/Mybatis/image-20220507203757544.png" srcset="/img/loading.gif" lazyload class="">
+<img src="/2022/05/07/Mybatis/image-20220507203757544.png" class="">
 <p>从上面结果我们看到了问题，有些数据封装成功了，而有些数据并没有封装成功。为什么这样呢？</p>
 <p>这个问题可以通过两种方式进行解决：</p>
 <ul>
@@ -421,7 +421,7 @@
 <code>companyName</code> ，而表中的字段名为 <code>brand_name</code> 和
 <code>company_name</code>，如下图所示
 。那么我们只需要保持这两部分的名称一致这个问题就迎刃而解。</p>
-<img src="/2022/05/07/Mybatis/image-20220507203802038.png" srcset="/img/loading.gif" lazyload class="">
+<img src="/2022/05/07/Mybatis/image-20220507203802038.png" class="">
 <p>我们可以在写sql语句时给这两个字段起别名，将别名定义成和属性名一致即可。</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">select</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;selectAll&quot;</span> <span class="hljs-attr">resultType</span>=<span class="hljs-string">&quot;brand&quot;</span>&gt;</span><br>    select<br>    id, brand_name as brandName, company_name as companyName, ordered, description, status<br>    from tb_brand;<br><span class="hljs-tag">&lt;/<span class="hljs-name">select</span>&gt;</span><br></code></pre></td></tr></table></figure>
 <p>而上面的SQL语句中的字段列表书写麻烦，如果表中还有更多的字段，同时其他的功能也需要查询这些字段时就显得我们的代码不够精炼。Mybatis提供了<code>sql</code>
@@ -464,13 +464,13 @@ SQL 片段，这就显得不是那么灵活。</p>
 statement 书写如下：</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs xml"> <span class="hljs-tag">&lt;<span class="hljs-name">resultMap</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;brandResultMap&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;brand&quot;</span>&gt;</span><br>     <span class="hljs-comment">&lt;!--</span><br><span class="hljs-comment">            id：完成主键字段的映射</span><br><span class="hljs-comment">                column：表的列名</span><br><span class="hljs-comment">                property：实体类的属性名</span><br><span class="hljs-comment">            result：完成一般字段的映射</span><br><span class="hljs-comment">                column：表的列名</span><br><span class="hljs-comment">                property：实体类的属性名</span><br><span class="hljs-comment">        --&gt;</span><br>     <span class="hljs-tag">&lt;<span class="hljs-name">result</span> <span class="hljs-attr">column</span>=<span class="hljs-string">&quot;brand_name&quot;</span> <span class="hljs-attr">property</span>=<span class="hljs-string">&quot;brandName&quot;</span>/&gt;</span><br>     <span class="hljs-tag">&lt;<span class="hljs-name">result</span> <span class="hljs-attr">column</span>=<span class="hljs-string">&quot;company_name&quot;</span> <span class="hljs-attr">property</span>=<span class="hljs-string">&quot;companyName&quot;</span>/&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">resultMap</span>&gt;</span><br><br><br><br><span class="hljs-tag">&lt;<span class="hljs-name">select</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;selectAll&quot;</span> <span class="hljs-attr">resultMap</span>=<span class="hljs-string">&quot;brandResultMap&quot;</span>&gt;</span><br>    select *<br>    from tb_brand;<br><span class="hljs-tag">&lt;/<span class="hljs-name">select</span>&gt;</span><br></code></pre></td></tr></table></figure>
 <h3 id="查询详情">1.3 查询详情</h3>
-<img src="/2022/05/07/Mybatis/image-20220507203815509.png" srcset="/img/loading.gif" lazyload class="">
+<img src="/2022/05/07/Mybatis/image-20220507203815509.png" class="">
 <p>有些数据的属性比较多，在页面表格中无法全部实现，而只会显示部分，而其他属性数据的查询可以通过
 <code>查看详情</code> 来进行查询，如上图所示。</p>
 <p>查看详情功能实现步骤：</p>
 <ul>
 <li><p>编写接口方法：Mapper接口</p>
-<img src="/2022/05/07/Mybatis/image-20220507203821202.png" srcset="/img/loading.gif" lazyload class="">
+<img src="/2022/05/07/Mybatis/image-20220507203821202.png" class="">
 <ul>
 <li><p>参数：id</p>
 <p>查看详情就是查询某一行数据，所以需要根据id进行查询。而id以后是由页面传递过来。</p></li>
@@ -478,7 +478,7 @@ statement 书写如下：</p>
 <p>根据id查询出来的数据只要一条，而将一条数据封装成一个Brand对象即可</p></li>
 </ul></li>
 <li><p>编写SQL语句：SQL映射文件</p>
-<img src="/2022/05/07/Mybatis/image-20220507203824870.png" srcset="/img/loading.gif" lazyload class=""></li>
+<img src="/2022/05/07/Mybatis/image-20220507203824870.png" class=""></li>
 <li><p>执行方法、进行测试</p></li>
 </ul>
 <h4 id="编写接口方法-1">1.3.1 编写接口方法</h4>
@@ -497,7 +497,7 @@ statement 书写如下：</p>
 <code>MybatisTest类中</code> 定义测试方法</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs java"> <span class="hljs-meta">@Test</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">testSelectById</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> IOException &#123;<br>    <span class="hljs-comment">//接收参数，该id以后需要传递过来</span><br>    <span class="hljs-type">int</span> <span class="hljs-variable">id</span> <span class="hljs-operator">=</span> <span class="hljs-number">1</span>;<br><br>    <span class="hljs-comment">//1. 获取SqlSessionFactory</span><br>    <span class="hljs-type">String</span> <span class="hljs-variable">resource</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;mybatis-config.xml&quot;</span>;<br>    <span class="hljs-type">InputStream</span> <span class="hljs-variable">inputStream</span> <span class="hljs-operator">=</span> Resources.getResourceAsStream(resource);<br>    <span class="hljs-type">SqlSessionFactory</span> <span class="hljs-variable">sqlSessionFactory</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">SqlSessionFactoryBuilder</span>().build(inputStream);<br><br>    <span class="hljs-comment">//2. 获取SqlSession对象</span><br>    <span class="hljs-type">SqlSession</span> <span class="hljs-variable">sqlSession</span> <span class="hljs-operator">=</span> sqlSessionFactory.openSession();<br><br>    <span class="hljs-comment">//3. 获取Mapper接口的代理对象</span><br>    <span class="hljs-type">BrandMapper</span> <span class="hljs-variable">brandMapper</span> <span class="hljs-operator">=</span> sqlSession.getMapper(BrandMapper.class);<br><br>    <span class="hljs-comment">//4. 执行方法</span><br>    <span class="hljs-type">Brand</span> <span class="hljs-variable">brand</span> <span class="hljs-operator">=</span> brandMapper.selectById(id);<br>    System.out.println(brand);<br><br>    <span class="hljs-comment">//5. 释放资源</span><br>    sqlSession.close();<br>&#125;<br></code></pre></td></tr></table></figure>
 <p>执行测试方法结果如下：</p>
-<img src="/2022/05/07/Mybatis/image-20220507203832972.png" srcset="/img/loading.gif" lazyload class="">
+<img src="/2022/05/07/Mybatis/image-20220507203832972.png" class="">
 <h4 id="参数占位符">1.3.4 参数占位符</h4>
 <p>查询到的结果很好理解就是id为1的这行数据。而这里我们需要看控制台显示的SQL语句，能看到使用？进行占位。说明我们在映射配置文件中的写的
 <code>#&#123;id&#125;</code>
@@ -512,7 +512,7 @@ statement 书写如下：</p>
 替换成 ${} 来看效果</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">select</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;selectById&quot;</span>  <span class="hljs-attr">resultMap</span>=<span class="hljs-string">&quot;brandResultMap&quot;</span>&gt;</span><br>    select *<br>    from tb_brand where id = $&#123;id&#125;;<br><span class="hljs-tag">&lt;/<span class="hljs-name">select</span>&gt;</span><br></code></pre></td></tr></table></figure>
 <p>重新运行查看结果如下：</p>
-<img src="/2022/05/07/Mybatis/image-20220507203838427.png" srcset="/img/loading.gif" lazyload class=""></li>
+<img src="/2022/05/07/Mybatis/image-20220507203838427.png" class=""></li>
 </ul>
 <blockquote>
 <p>==注意：==从上面两个例子可以看出，以后开发我们使用 #{}
@@ -525,18 +525,18 @@ statement 书写如下：</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">select</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;selectById&quot;</span> <span class="hljs-attr">parameterType</span>=<span class="hljs-string">&quot;int&quot;</span> <span class="hljs-attr">resultMap</span>=<span class="hljs-string">&quot;brandResultMap&quot;</span>&gt;</span><br>    select *<br>    from tb_brand where id = $&#123;id&#125;;<br><span class="hljs-tag">&lt;/<span class="hljs-name">select</span>&gt;</span><br></code></pre></td></tr></table></figure>
 <h4 id="sql语句中特殊字段处理">*1.3.6 SQL语句中特殊字段处理</h4>
 <p>以后肯定会在SQL语句中写一下特殊字符，比如某一个字段大于某个值，如下图</p>
-<img src="/2022/05/07/Mybatis/image-20220507203845190.png" srcset="/img/loading.gif" lazyload class="">
+<img src="/2022/05/07/Mybatis/image-20220507203845190.png" class="">
 <p>可以看出报错了，因为映射配置文件是xml类型的问题，而 &gt; &lt;
 等这些字符在xml中有特殊含义，所以此时我们需要将这些符号进行转义，可以使用以下两种方式进行转义</p>
 <ul>
 <li><p>转义字符</p>
 <p>下图的 <code>&amp;lt;</code> 就是 <code>&lt;</code> 的转义字符。</p>
-<img src="/2022/05/07/Mybatis/image-20220507203849495.png" srcset="/img/loading.gif" lazyload class=""></li>
+<img src="/2022/05/07/Mybatis/image-20220507203849495.png" class=""></li>
 <li><p>&lt;[CDATA[内容]]&gt;</p>
-<img src="/2022/05/07/Mybatis/image-20220507203853433.png" srcset="/img/loading.gif" lazyload class=""></li>
+<img src="/2022/05/07/Mybatis/image-20220507203853433.png" class=""></li>
 </ul>
 <h3 id="多条件查询">1.4 多条件查询</h3>
-<img src="/2022/05/07/Mybatis/image-20220507203857735.png" srcset="/img/loading.gif" lazyload class="">
+<img src="/2022/05/07/Mybatis/image-20220507203857735.png" class="">
 <p>我们经常会遇到如上图所示的多条件查询，将多条件查询的结果展示在下方的数据列表中。而我们做这个功能需要分析最终的SQL语句应该是什么样，思考两个问题</p>
 <ul>
 <li>条件表达式</li>
@@ -544,7 +544,7 @@ statement 书写如下：</p>
 </ul>
 <p>条件字段 <code>企业名称</code> 和 <code>品牌名称</code>
 需要进行模糊查询，所以条件应该是：</p>
-<img src="/2022/05/07/Mybatis/image-20220507203902734.png" srcset="/img/loading.gif" lazyload class="">
+<img src="/2022/05/07/Mybatis/image-20220507203902734.png" class="">
 <p>简单的分析后，我们来看功能实现的步骤：</p>
 <ul>
 <li><p>编写接口方法</p>
@@ -607,7 +607,7 @@ statement 书写如下：</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">select</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;selectByCondition&quot;</span> <span class="hljs-attr">resultMap</span>=<span class="hljs-string">&quot;brandResultMap&quot;</span>&gt;</span><br>    select *<br>    from tb_brand<br>    where<br>        <span class="hljs-tag">&lt;<span class="hljs-name">if</span> <span class="hljs-attr">test</span>=<span class="hljs-string">&quot;status != null&quot;</span>&gt;</span><br>            and status = #&#123;status&#125;<br>        <span class="hljs-tag">&lt;/<span class="hljs-name">if</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">if</span> <span class="hljs-attr">test</span>=<span class="hljs-string">&quot;companyName != null and companyName != &#x27;&#x27; &quot;</span>&gt;</span><br>            and company_name like #&#123;companyName&#125;<br>        <span class="hljs-tag">&lt;/<span class="hljs-name">if</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">if</span> <span class="hljs-attr">test</span>=<span class="hljs-string">&quot;brandName != null and brandName != &#x27;&#x27; &quot;</span>&gt;</span><br>            and brand_name like #&#123;brandName&#125;<br>        <span class="hljs-tag">&lt;/<span class="hljs-name">if</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">select</span>&gt;</span><br></code></pre></td></tr></table></figure>
 <p>如上的这种SQL语句就会根据传递的参数值进行动态的拼接。如果此时status和companyName有值那么就会值拼接这两个条件。</p>
 <p>执行结果如下：</p>
-<img src="/2022/05/07/Mybatis/image-20220507203914276.png" srcset="/img/loading.gif" lazyload class="">
+<img src="/2022/05/07/Mybatis/image-20220507203914276.png" class="">
 <p>但是它也存在问题，如果此时给的参数值是</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">Map</span> <span class="hljs-variable">map</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">HashMap</span>();<br><span class="hljs-comment">// map.put(&quot;status&quot; , status);</span><br>map.put(<span class="hljs-string">&quot;companyName&quot;</span>, companyName);<br>map.put(<span class="hljs-string">&quot;brandName&quot;</span> , brandName);<br></code></pre></td></tr></table></figure>
 <p>拼接的SQL语句就变成了</p>
@@ -629,7 +629,7 @@ statement 书写如下：</p>
 </blockquote></li>
 </ul>
 <h3 id="单个条件动态sql">1.5 单个条件（动态SQL）</h3>
-<img src="/2022/05/07/Mybatis/image-20220507203922719.png" srcset="/img/loading.gif" lazyload class="">
+<img src="/2022/05/07/Mybatis/image-20220507203922719.png" class="">
 <p>如上图所示，在查询时只能选择
 <code>品牌名称</code>、<code>当前状态</code>、<code>企业名称</code>
 这三个条件中的一个，但是用户到底选择哪儿一个，我们并不能确定。这种就属于单个条件的动态SQL语句。</p>
@@ -649,19 +649,19 @@ statement 书写如下：</p>
 <code>MybatisTest类中</code> 定义测试方法</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-meta">@Test</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">testSelectByConditionSingle</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> IOException &#123;<br>    <span class="hljs-comment">//接收参数</span><br>    <span class="hljs-type">int</span> <span class="hljs-variable">status</span> <span class="hljs-operator">=</span> <span class="hljs-number">1</span>;<br>    <span class="hljs-type">String</span> <span class="hljs-variable">companyName</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;华为&quot;</span>;<br>    <span class="hljs-type">String</span> <span class="hljs-variable">brandName</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;华为&quot;</span>;<br><br>    <span class="hljs-comment">// 处理参数</span><br>    companyName = <span class="hljs-string">&quot;%&quot;</span> + companyName + <span class="hljs-string">&quot;%&quot;</span>;<br>    brandName = <span class="hljs-string">&quot;%&quot;</span> + brandName + <span class="hljs-string">&quot;%&quot;</span>;<br><br>    <span class="hljs-comment">//封装对象</span><br>    <span class="hljs-type">Brand</span> <span class="hljs-variable">brand</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Brand</span>();<br>    <span class="hljs-comment">//brand.setStatus(status);</span><br>    brand.setCompanyName(companyName);<br>    <span class="hljs-comment">//brand.setBrandName(brandName);</span><br><br>    <span class="hljs-comment">//1. 获取SqlSessionFactory</span><br>    <span class="hljs-type">String</span> <span class="hljs-variable">resource</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;mybatis-config.xml&quot;</span>;<br>    <span class="hljs-type">InputStream</span> <span class="hljs-variable">inputStream</span> <span class="hljs-operator">=</span> Resources.getResourceAsStream(resource);<br>    <span class="hljs-type">SqlSessionFactory</span> <span class="hljs-variable">sqlSessionFactory</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">SqlSessionFactoryBuilder</span>().build(inputStream);<br>    <span class="hljs-comment">//2. 获取SqlSession对象</span><br>    <span class="hljs-type">SqlSession</span> <span class="hljs-variable">sqlSession</span> <span class="hljs-operator">=</span> sqlSessionFactory.openSession();<br>    <span class="hljs-comment">//3. 获取Mapper接口的代理对象</span><br>    <span class="hljs-type">BrandMapper</span> <span class="hljs-variable">brandMapper</span> <span class="hljs-operator">=</span> sqlSession.getMapper(BrandMapper.class);<br>    <span class="hljs-comment">//4. 执行方法</span><br>    List&lt;Brand&gt; brands = brandMapper.selectByConditionSingle(brand);<br>    System.out.println(brands);<br><br>    <span class="hljs-comment">//5. 释放资源</span><br>    sqlSession.close();<br>&#125;<br></code></pre></td></tr></table></figure>
 <p>执行测试方法结果如下：</p>
-<img src="/2022/05/07/Mybatis/image-20220507203929215.png" srcset="/img/loading.gif" lazyload class="">
+<img src="/2022/05/07/Mybatis/image-20220507203929215.png" class="">
 <h3 id="添加数据">1.6 添加数据</h3>
-<img src="/2022/05/07/Mybatis/image-20220507203935762.png" srcset="/img/loading.gif" lazyload class="">
+<img src="/2022/05/07/Mybatis/image-20220507203935762.png" class="">
 <p>如上图是我们平时在添加数据时展示的页面，而我们在该页面输入想要的数据后添加
 <code>提交</code>
 按钮，就会将这些数据添加到数据库中。接下来我们就来实现添加数据的操作。</p>
 <ul>
 <li><p>编写接口方法</p>
-<img src="/2022/05/07/Mybatis/image-20220507203940309.png" srcset="/img/loading.gif" lazyload class="">
+<img src="/2022/05/07/Mybatis/image-20220507203940309.png" class="">
 <p>参数：除了id之外的所有的数据。id对应的是表中主键值，而主键我们是
 ==自动增长== 生成的。</p></li>
 <li><p>编写SQL语句</p>
-<img src="/2022/05/07/Mybatis/image-20220507203943944.png" srcset="/img/loading.gif" lazyload class=""></li>
+<img src="/2022/05/07/Mybatis/image-20220507203943944.png" class=""></li>
 <li><p>编写测试方法并执行</p></li>
 </ul>
 <p>明确了该功能实现的步骤后，接下来我们进行具体的操作。</p>
@@ -677,17 +677,17 @@ statement 书写如下：</p>
 <code>MybatisTest类中</code> 定义测试方法</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-meta">@Test</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">testAdd</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> IOException &#123;<br>    <span class="hljs-comment">//接收参数</span><br>    <span class="hljs-type">int</span> <span class="hljs-variable">status</span> <span class="hljs-operator">=</span> <span class="hljs-number">1</span>;<br>    <span class="hljs-type">String</span> <span class="hljs-variable">companyName</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;波导手机&quot;</span>;<br>    <span class="hljs-type">String</span> <span class="hljs-variable">brandName</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;波导&quot;</span>;<br>    <span class="hljs-type">String</span> <span class="hljs-variable">description</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;手机中的战斗机&quot;</span>;<br>    <span class="hljs-type">int</span> <span class="hljs-variable">ordered</span> <span class="hljs-operator">=</span> <span class="hljs-number">100</span>;<br><br>    <span class="hljs-comment">//封装对象</span><br>    <span class="hljs-type">Brand</span> <span class="hljs-variable">brand</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Brand</span>();<br>    brand.setStatus(status);<br>    brand.setCompanyName(companyName);<br>    brand.setBrandName(brandName);<br>    brand.setDescription(description);<br>    brand.setOrdered(ordered);<br><br>    <span class="hljs-comment">//1. 获取SqlSessionFactory</span><br>    <span class="hljs-type">String</span> <span class="hljs-variable">resource</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;mybatis-config.xml&quot;</span>;<br>    <span class="hljs-type">InputStream</span> <span class="hljs-variable">inputStream</span> <span class="hljs-operator">=</span> Resources.getResourceAsStream(resource);<br>    <span class="hljs-type">SqlSessionFactory</span> <span class="hljs-variable">sqlSessionFactory</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">SqlSessionFactoryBuilder</span>().build(inputStream);<br>    <span class="hljs-comment">//2. 获取SqlSession对象</span><br>    <span class="hljs-type">SqlSession</span> <span class="hljs-variable">sqlSession</span> <span class="hljs-operator">=</span> sqlSessionFactory.openSession();<br>    <span class="hljs-comment">//SqlSession sqlSession = sqlSessionFactory.openSession(true); //设置自动提交事务，这种情况不需要手动提交事务了</span><br>    <span class="hljs-comment">//3. 获取Mapper接口的代理对象</span><br>    <span class="hljs-type">BrandMapper</span> <span class="hljs-variable">brandMapper</span> <span class="hljs-operator">=</span> sqlSession.getMapper(BrandMapper.class);<br>    <span class="hljs-comment">//4. 执行方法</span><br>    brandMapper.add(brand);<br>    <span class="hljs-comment">//提交事务</span><br>    sqlSession.commit();<br>    <span class="hljs-comment">//5. 释放资源</span><br>    sqlSession.close();<br>&#125;<br></code></pre></td></tr></table></figure>
 <p>执行结果如下：</p>
-<img src="/2022/05/07/Mybatis/image-20220507203950911.png" srcset="/img/loading.gif" lazyload class="">
+<img src="/2022/05/07/Mybatis/image-20220507203950911.png" class="">
 <h4 id="添加-主键返回">1.6.4 添加-主键返回</h4>
 <p>在数据添加成功后，有时候需要获取插入数据库数据的主键（主键是自增长）。</p>
 <p>比如：添加订单和订单项，如下图就是京东上的订单</p>
-<img src="/2022/05/07/Mybatis/image-20220507203956077.png" srcset="/img/loading.gif" lazyload class="">
+<img src="/2022/05/07/Mybatis/image-20220507203956077.png" class="">
 <p>订单数据存储在订单表中，订单项存储在订单项表中。</p>
 <ul>
 <li><p>添加订单数据</p>
-<img src="/2022/05/07/Mybatis/image-20220507204000348.png" srcset="/img/loading.gif" lazyload class=""></li>
+<img src="/2022/05/07/Mybatis/image-20220507204000348.png" class=""></li>
 <li><p>添加订单项数据，订单项中需要设置所属订单的id</p>
-<img src="/2022/05/07/Mybatis/image-20220507204005160.png" srcset="/img/loading.gif" lazyload class=""></li>
+<img src="/2022/05/07/Mybatis/image-20220507204005160.png" class=""></li>
 </ul>
 <p>明白了什么时候 <code>主键返回</code>
 。接下来我们简单模拟一下，在添加完数据后打印id属性值，能打印出来说明已经获取到了。</p>
@@ -702,7 +702,7 @@ statement 书写如下：</p>
 </ul>
 </blockquote>
 <h3 id="修改">1.7 修改</h3>
-<img src="/2022/05/07/Mybatis/image-20220507204010823.png" srcset="/img/loading.gif" lazyload class="">
+<img src="/2022/05/07/Mybatis/image-20220507204010823.png" class="">
 <p>如图所示是修改页面，用户在该页面书写需要修改的数据，点击
 <code>提交</code>
 按钮，就会将数据库中对应的数据进行修改。注意一点，如果哪儿个输入框没有输入内容，我们是将表中数据对应字段值替换为空白还是保留字段之前的值？答案肯定是保留之前的数据。</p>
@@ -727,12 +727,12 @@ statement 书写如下：</p>
 <code>MybatisTest类中</code> 定义测试方法</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-meta">@Test</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">testUpdate</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> IOException &#123;<br>    <span class="hljs-comment">//接收参数</span><br>    <span class="hljs-type">int</span> <span class="hljs-variable">status</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>;<br>    <span class="hljs-type">String</span> <span class="hljs-variable">companyName</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;波导手机&quot;</span>;<br>    <span class="hljs-type">String</span> <span class="hljs-variable">brandName</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;波导&quot;</span>;<br>    <span class="hljs-type">String</span> <span class="hljs-variable">description</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;波导手机,手机中的战斗机&quot;</span>;<br>    <span class="hljs-type">int</span> <span class="hljs-variable">ordered</span> <span class="hljs-operator">=</span> <span class="hljs-number">200</span>;<br>    <span class="hljs-type">int</span> <span class="hljs-variable">id</span> <span class="hljs-operator">=</span> <span class="hljs-number">6</span>;<br><br>    <span class="hljs-comment">//封装对象</span><br>    <span class="hljs-type">Brand</span> <span class="hljs-variable">brand</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Brand</span>();<br>    brand.setStatus(status);<br>    <span class="hljs-comment">//        brand.setCompanyName(companyName);</span><br>    <span class="hljs-comment">//        brand.setBrandName(brandName);</span><br>    <span class="hljs-comment">//        brand.setDescription(description);</span><br>    <span class="hljs-comment">//        brand.setOrdered(ordered);</span><br>    brand.setId(id);<br><br>    <span class="hljs-comment">//1. 获取SqlSessionFactory</span><br>    <span class="hljs-type">String</span> <span class="hljs-variable">resource</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;mybatis-config.xml&quot;</span>;<br>    <span class="hljs-type">InputStream</span> <span class="hljs-variable">inputStream</span> <span class="hljs-operator">=</span> Resources.getResourceAsStream(resource);<br>    <span class="hljs-type">SqlSessionFactory</span> <span class="hljs-variable">sqlSessionFactory</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">SqlSessionFactoryBuilder</span>().build(inputStream);<br>    <span class="hljs-comment">//2. 获取SqlSession对象</span><br>    <span class="hljs-type">SqlSession</span> <span class="hljs-variable">sqlSession</span> <span class="hljs-operator">=</span> sqlSessionFactory.openSession();<br>    <span class="hljs-comment">//SqlSession sqlSession = sqlSessionFactory.openSession(true);</span><br>    <span class="hljs-comment">//3. 获取Mapper接口的代理对象</span><br>    <span class="hljs-type">BrandMapper</span> <span class="hljs-variable">brandMapper</span> <span class="hljs-operator">=</span> sqlSession.getMapper(BrandMapper.class);<br>    <span class="hljs-comment">//4. 执行方法</span><br>    <span class="hljs-type">int</span> <span class="hljs-variable">count</span> <span class="hljs-operator">=</span> brandMapper.update(brand);<br>    System.out.println(count);<br>    <span class="hljs-comment">//提交事务</span><br>    sqlSession.commit();<br>    <span class="hljs-comment">//5. 释放资源</span><br>    sqlSession.close();<br>&#125;<br></code></pre></td></tr></table></figure>
 <p>执行测试方法结果如下：</p>
-<img src="/2022/05/07/Mybatis/image-20220507204019057.png" srcset="/img/loading.gif" lazyload class="">
+<img src="/2022/05/07/Mybatis/image-20220507204019057.png" class="">
 <p>从结果中SQL语句可以看出，只修改了 <code>status</code>
 字段值，因为我们给的数据中只给Brand实体对象的 <code>status</code>
 属性设置值了。这就是 <code>set</code> 标签的作用。</p>
 <h3 id="删除一行数据">1.8 删除一行数据</h3>
-<img src="/2022/05/07/Mybatis/image-20220507204023055.png" srcset="/img/loading.gif" lazyload class="">
+<img src="/2022/05/07/Mybatis/image-20220507204023055.png" class="">
 <p>如上图所示，每行数据后面都有一个 <code>删除</code>
 按钮，当用户点击了该按钮，就会将改行数据删除掉。那我们就需要思考，这种删除是根据什么进行删除呢？是通过主键id删除，因为id是表中数据的唯一标识。</p>
 <p>接下来就来实现该功能。</p>
@@ -749,7 +749,7 @@ statement 书写如下：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs java"> <span class="hljs-meta">@Test</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">testDeleteById</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> IOException &#123;<br>    <span class="hljs-comment">//接收参数</span><br>    <span class="hljs-type">int</span> <span class="hljs-variable">id</span> <span class="hljs-operator">=</span> <span class="hljs-number">6</span>;<br><br>    <span class="hljs-comment">//1. 获取SqlSessionFactory</span><br>    <span class="hljs-type">String</span> <span class="hljs-variable">resource</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;mybatis-config.xml&quot;</span>;<br>    <span class="hljs-type">InputStream</span> <span class="hljs-variable">inputStream</span> <span class="hljs-operator">=</span> Resources.getResourceAsStream(resource);<br>    <span class="hljs-type">SqlSessionFactory</span> <span class="hljs-variable">sqlSessionFactory</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">SqlSessionFactoryBuilder</span>().build(inputStream);<br>    <span class="hljs-comment">//2. 获取SqlSession对象</span><br>    <span class="hljs-type">SqlSession</span> <span class="hljs-variable">sqlSession</span> <span class="hljs-operator">=</span> sqlSessionFactory.openSession();<br>    <span class="hljs-comment">//SqlSession sqlSession = sqlSessionFactory.openSession(true);</span><br>    <span class="hljs-comment">//3. 获取Mapper接口的代理对象</span><br>    <span class="hljs-type">BrandMapper</span> <span class="hljs-variable">brandMapper</span> <span class="hljs-operator">=</span> sqlSession.getMapper(BrandMapper.class);<br>    <span class="hljs-comment">//4. 执行方法</span><br>    brandMapper.deleteById(id);<br>    <span class="hljs-comment">//提交事务</span><br>    sqlSession.commit();<br>    <span class="hljs-comment">//5. 释放资源</span><br>    sqlSession.close();<br>&#125;<br></code></pre></td></tr></table></figure>
 <p>运行过程只要没报错，直接到数据库查询数据是否还存在。</p>
 <h3 id="批量删除">1.9 批量删除</h3>
-<img src="/2022/05/07/Mybatis/image-20220507204031202.png" srcset="/img/loading.gif" lazyload class="">
+<img src="/2022/05/07/Mybatis/image-20220507204031202.png" class="">
 <p>如上图所示，用户可以选择多条数据，然后点击上面的 <code>删除</code>
 按钮，就会删除数据库中对应的多行数据。</p>
 <h4 id="编写接口方法-7">1.9.1 编写接口方法</h4>
@@ -837,7 +837,7 @@ param2，依次类推。如：</p>
 <p>或者</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">select</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;select&quot;</span> <span class="hljs-attr">resultType</span>=<span class="hljs-string">&quot;user&quot;</span>&gt;</span><br>	select *<br>    from tb_user<br>    where <br>    	username=#&#123;param1&#125;<br>    	and password=#&#123;param2&#125;<br><span class="hljs-tag">&lt;/<span class="hljs-name">select</span>&gt;</span><br></code></pre></td></tr></table></figure></li>
 <li><p>运行代码结果如下</p>
-<img src="/2022/05/07/Mybatis/image-20220507204041993.png" srcset="/img/loading.gif" lazyload class="">
+<img src="/2022/05/07/Mybatis/image-20220507204041993.png" class="">
 <p>在映射配合文件的SQL语句中使用用 <code>arg</code> 开头的和
 <code>param</code> 书写，代码的可读性会变的特别差，此时可以使用
 <code>@Param</code> 注解。</p></li>
@@ -862,7 +862,7 @@ param2，依次类推。如：</p>
 <code>username</code> 还是写成 <code>arg0</code></p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">select</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;select&quot;</span> <span class="hljs-attr">resultType</span>=<span class="hljs-string">&quot;user&quot;</span>&gt;</span><br>	select *<br>    from tb_user<br>    where <br>    	username=#&#123;arg0&#125;<br>    	and password=#&#123;param2&#125;<br><span class="hljs-tag">&lt;/<span class="hljs-name">select</span>&gt;</span><br></code></pre></td></tr></table></figure></li>
 <li><p>运行程序则可以看到错误</p>
-<img src="/2022/05/07/Mybatis/image-20220507204049162.png" srcset="/img/loading.gif" lazyload class=""></li>
+<img src="/2022/05/07/Mybatis/image-20220507204049162.png" class=""></li>
 </ul>
 <p>==结论：以后接口参数是多个时，在每个参数上都使用 <code>@Param</code>
 注解。这样代码的可读性更高。==</p>
@@ -930,20 +930,20 @@ data-cites="Delete">@Delete</span></li>
 <ul>
 <li><p>将之前案例中 <code>UserMapper.xml</code> 中的 根据id查询数据 的
 <code>statement</code> 注释掉</p>
-<img src="/2022/05/07/Mybatis/image-20220507204101607.png" srcset="/img/loading.gif" lazyload class=""></li>
+<img src="/2022/05/07/Mybatis/image-20220507204101607.png" class=""></li>
 <li><p>在 <code>UserMapper</code> 接口的 <code>selectById</code>
 方法上添加注解</p>
-<img src="/2022/05/07/Mybatis/image-20220507204106200.png" srcset="/img/loading.gif" lazyload class=""></li>
+<img src="/2022/05/07/Mybatis/image-20220507204106200.png" class=""></li>
 <li><p>运行测试程序也能正常查询到数据</p></li>
 </ul>
 <p>我们课程上只演示这一个查询的注解开发，其他的同学们下来可以自己实现，都是比较简单。</p>
 <p>==注意：==在官方文档中 <code>入门</code> 中有这样的一段话：</p>
-<img src="/2022/05/07/Mybatis/image-20220507204111673.png" srcset="/img/loading.gif" lazyload class="">
+<img src="/2022/05/07/Mybatis/image-20220507204111673.png" class="">
 <p>所以，==注解完成简单功能，配置文件完成复杂功能。==</p>
 <p>而我们之前写的动态 SQL
 就是复杂的功能，如果用注解使用的话，就需要使用到 Mybatis
 提供的SQL构建器来完成，而对应的代码如下：</p>
-<img src="/2022/05/07/Mybatis/image-20220507204115685.png" srcset="/img/loading.gif" lazyload class="">
+<img src="/2022/05/07/Mybatis/image-20220507204115685.png" class="">
 <p>上述代码将java代码和SQL语句融到了一块，使得代码的可读性大幅度降低。</p>
 
             </div>
@@ -981,9 +981,9 @@ data-cites="Delete">@Delete</span></li>
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/05/07/MYbaits%E5%85%A5%E9%97%A8/">
+                      <a href="/2022/05/07/Maven&amp;MyBatis/">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">MyBatis入门</span>
+                        <span class="hidden-mobile">Maven&MyBatis</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -991,8 +991,8 @@ data-cites="Delete">@Delete</span></li>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/05/07/Maven&amp;MyBatis/">
-                        <span class="hidden-mobile">Maven&MyBatis</span>
+                      <a href="/2022/05/06/mysql%E6%80%BB%E7%BB%93/">
+                        <span class="hidden-mobile">mysql总结</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -1094,10 +1094,6 @@ data-cites="Delete">@Delete</span></li>
   <script  src="/js/local-search.js" ></script>
 
 
-
-  
-    <script  src="/js/img-lazyload.js" ></script>
-  
 
 
 
